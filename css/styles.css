@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    border-right: 1px solid #dee2e6;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateX(-100%);
+}
+
+.navbar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #343a40;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #343a40;
+    text-align: center;
+}
+
+.progress {
+    height: 20px;
+}
+
+.progress-bar {
+    transition: width 0.1s linear;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
