@@ -1,23 +1,18 @@
 body {
     background-color: #f8f9fa;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 20px;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    width: 100%;
+    max-width: 250px;
     background-color: #ffffff;
     border-right: 1px solid #dee2e6;
     padding: 20px;
-    height: 100vh;
     overflow-y: auto;
     transition: transform 0.3s ease;
 }
@@ -26,39 +21,33 @@ body {
     transform: translateX(-100%);
 }
 
-.navbar h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.navbar-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    background-color: #343a40;
-    color: #ffffff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
 h1 {
     font-family: Arial, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #343a40;
     text-align: center;
 }
 
-.progress {
-    height: 20px;
+.table-responsive {
+    overflow-x: auto;
 }
 
-.progress-bar {
-    transition: width 0.1s linear;
-}
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
 
-button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+    .navbar {
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
 }
