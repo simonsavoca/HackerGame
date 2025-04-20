@@ -127,8 +127,6 @@ function gameLoop() {
             }
         }
     });
-
-    saveGameData();
     updateUI();
 }
 
@@ -175,3 +173,4 @@ document.getElementById("reset-button").addEventListener("click", () => {
 loadGameData();
 updateUI();
 setInterval(gameLoop,1000/60);
+setInterval(saveGameData,3000);
